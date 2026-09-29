@@ -45,7 +45,7 @@ public class InstrutorService {
         Instrutor instrutor = instrutorRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Instrutor não encontrado com id: " + id));
 
-        instrutorMapper.update(InstrutorRequestDTO, instrutor);
+        instrutorMapper.update(dto, instrutor);
 
         return instrutorMapper.toDTO(instrutorRepository.save(instrutor));
     }

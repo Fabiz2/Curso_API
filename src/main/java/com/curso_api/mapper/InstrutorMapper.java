@@ -13,9 +13,9 @@ public interface InstrutorMapper {
     InstrutorResponseDTO toDTO(Instrutor instrutor);
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "curso", ignore = true)
+    @Mapping(target = "cursos", ignore = true)
     Instrutor toEntity(InstrutorRequestDTO instrutorRequestDTO);
 
     @Mapping(target = "id", ignore = true)
-    Void update(InstrutorRequestDTO instrutorRequestDTO, @MappingTarget Instrutor instrutor);
+    void update(InstrutorRequestDTO instrutorRequestDTO, @MappingTarget Instrutor instrutor);
 }
