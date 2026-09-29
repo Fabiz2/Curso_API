@@ -12,7 +12,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: action/setup-java@v4
+        uses: actions/checkout@v4
+
+      - name: Configure Java 21git
+        uses: actions/setup-java@v4
         with:
           java-version: "21"
           distribution: "temurin"
